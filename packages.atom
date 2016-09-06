@@ -1,14 +1,15 @@
 atom-beautify
 atom-ternjs
 autoclose-html
+autocomplete-clang
 autocomplete-python
 color-picker
 docblockr
 file-icons
-git-plus
 git-time-machine
 highlight-selected
 linter
+linter-clang
 linter-jshint
 markdown-preview-plus
 merge-conflicts
@@ -16,5 +17,6 @@ minimap
 minimap-cursorline
 minimap-highlight-selected
 pigments
+pretty-json
 python-tools
 sort-lines
