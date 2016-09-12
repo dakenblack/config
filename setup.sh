@@ -4,3 +4,4 @@ git config --global user.name "Jabez Wilson"
 ./install_packages.sh
 ./git-aliases.sh
 ./activate_git_complete.sh
+cp ./.vimrc ~
