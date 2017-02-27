@@ -22,4 +22,4 @@ set splitright
 
 "edit .vimrc on the fly
 command! Fly execute "55vsplit $MYVIMRC"
-command! SV execute "so %"
+command! SV execute "so $MYVIMRC"

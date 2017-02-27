@@ -3,6 +3,10 @@
 
 DEFAULT_USER=jabez
 
+config() {
+  cd ~/config
+}
+
 # END MY ADDITIONS ====================
 
 
