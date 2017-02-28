@@ -1,5 +1,6 @@
 "plugin stuff
- execute pathogen#infect()
+execute pathogen#infect()
+nnoremap D :NERDTree<CR>
 
 "some basic stuff
 syntax on
@@ -10,6 +11,8 @@ nnoremap K {
 
 inoremap jj <Esc>
 inoremap kk <Esc>
+
+nnoremap ; :
 
 "commenting (requires tcomment)
 " for some reason I have to do C-/ C-/ (twice for it to work
