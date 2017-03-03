@@ -1,11 +1,23 @@
 "plugin stuff
 execute pathogen#infect()
+Helptags
+
+"NERD Tree stuff
 nnoremap D :NERDTree<CR>
 
 "makes all NERD comments aligned to the left side
 let NERDDefaultAlign='left'
 vnoremap <C-c> :call NERDComment("x","Toggle")<CR>
 nnoremap <C-c> :call NERDComment("n","Toggle")<CR>
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 filetype plugin on
 
@@ -20,6 +32,10 @@ inoremap jj <Esc>
 inoremap kk <Esc>
 
 nnoremap ; :
+nnoremap '' :echo @%<CR>
+
+vnoremap / y/<C-R>"<CR>
+vnoremap ( y:s/<C-R>"/(<C-R>")/<CR>
 
 "moving lines
 nnoremap <Down> :m +1<CR>==
@@ -36,7 +52,8 @@ set shiftwidth=2
 
 "tags stuff
 set tags=./tags;,tags;
-nnoremap t <C-]>
+nnoremap ] <C-]>
+nnoremap [ <C-t>
 
 "pane stuff
 nnoremap <C-J> <C-W><C-J>
@@ -54,5 +71,5 @@ set splitbelow
 set splitright
 
 "edit .vimrc on the fly
-command! Fly execute "65vsplit $MYVIMRC"
+command! Fly execute "45vsplit $MYVIMRC"
 command! SV execute "so $MYVIMRC"
