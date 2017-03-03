@@ -1,5 +1,7 @@
 
 # MY ADDITIONS =======================
+export VISUAL=vim
+export EDITOR="$VISUAL"
 
 DEFAULT_USER=jabez
 
