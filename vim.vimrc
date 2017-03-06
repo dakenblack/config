@@ -24,6 +24,8 @@ filetype plugin on
 "some basic stuff
 syntax on
 set number
+set hlsearch
+set fdm=indent
 
 nnoremap J }
 nnoremap K {
@@ -34,6 +36,7 @@ inoremap kk <Esc>
 nnoremap ; :
 nnoremap '' :echo @%<CR>
 
+"look for current highlighted word
 vnoremap / y/<C-R>"<CR>
 vnoremap ( y:s/<C-R>"/(<C-R>")/<CR>
 
@@ -45,6 +48,10 @@ nnoremap <Up> :m -2<CR>==
 vnoremap <Down> :m '>+1<CR>gv=gv
 vnoremap <Up> :m '<-2<CR>gv=gv
 
+"folding 
+nnoremap 00 zo
+nnoremap -- zc
+
 "tabs
 set cindent
 set tabstop=2
@@ -54,6 +61,7 @@ set shiftwidth=2
 set tags=./tags;,tags;
 nnoremap ] <C-]>
 nnoremap [ <C-t>
+nnoremap <C-]> <C-]><C-t>:stj<CR>
 
 "pane stuff
 nnoremap <C-J> <C-W><C-J>
