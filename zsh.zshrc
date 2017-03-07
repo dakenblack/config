@@ -8,6 +8,11 @@ DEFAULT_USER=jabez
 config() {
   cd ~/config
 }
+PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+
+myDu() {
+	for i in `ls -a "${1:-.}"` ; do ; du -s "${1:-.}/$i" ; done
+}
 
 # END MY ADDITIONS ====================
 
