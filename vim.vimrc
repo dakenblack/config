@@ -1,26 +1,3 @@
-"plugin stuff
-execute pathogen#infect()
-Helptags
-
-"NERD Tree stuff
-nnoremap D :NERDTree<CR>
-
-"makes all NERD comments aligned to the left side
-let NERDDefaultAlign='left'
-vnoremap <C-c> :call NERDComment("x","Toggle")<CR>
-nnoremap <C-c> :call NERDComment("n","Toggle")<CR>
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-filetype plugin on
-
 "some basic stuff
 syntax on
 set number
@@ -53,6 +30,7 @@ nnoremap 00 zo
 nnoremap -- zc
 
 "tabs
+set expandtab
 set cindent
 set tabstop=2
 set shiftwidth=2
