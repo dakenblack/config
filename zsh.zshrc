@@ -16,7 +16,7 @@ myDu() {
 
 # ROS
 kinetic() {
-  source /opt/ros/kinetic/setup.bash
+  source /opt/ros/kinetic/setup.zsh
   export PYTHONPATH=/opt/ros/kinetic/lib/python2.7/site-packages:$PYTHONPATH
   export PKG_CONFIG_PATH="/opt/ros/kinetic/lib/pkgconfig:$PKG_CONFIG_PATH"
   # Optionally, you can set:
