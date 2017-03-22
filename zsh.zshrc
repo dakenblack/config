@@ -14,6 +14,21 @@ myDu() {
 	for i in `ls -a "${1:-.}"` ; do ; du -s "${1:-.}/$i" ; done
 }
 
+# ROS
+kinetic() {
+  source /opt/ros/kinetic/setup.zsh
+  export PYTHONPATH=/opt/ros/kinetic/lib/python2.7/site-packages:$PYTHONPATH
+  export PKG_CONFIG_PATH="/opt/ros/kinetic/lib/pkgconfig:$PKG_CONFIG_PATH"
+  # Optionally, you can set:
+  #export ROS_PACKAGE_PATH=/path/to/your/package/path:$ROS_PACKAGE_PATH
+
+  # Useful aliases
+  alias catkin_make="catkin_make -DPYTHON_EXECUTABLE=/usr/bin/python2 -DPYTHON_INCLUDE_DIR=/usr/include/python2.7 -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so"
+
+  # If you use Gazebo:
+  source /usr/share/gazebo/setup.sh
+}
+
 # END MY ADDITIONS ====================
 
 
