@@ -14,10 +14,18 @@ myDu() {
 	for i in `ls -a "${1:-.}"` ; do ; du -s "${1:-.}/$i" ; done
 }
 
+up_zsh() {
+  cd ~/config
+  cp ~/.zshrc ./
+  git ac -m "$1"
+  git push
+}
+
 # ROS
 kinetic() {
   source /opt/ros/kinetic/setup.zsh
   export PYTHONPATH=/opt/ros/kinetic/lib/python2.7/site-packages:$PYTHONPATH
+  export GAZEBO_MODEL_PATH=/home/jabez/gz-models:$GAZEBO_MODEL_PATH
   export PKG_CONFIG_PATH="/opt/ros/kinetic/lib/pkgconfig:$PKG_CONFIG_PATH"
   # Optionally, you can set:
   #export ROS_PACKAGE_PATH=/path/to/your/package/path:$ROS_PACKAGE_PATH

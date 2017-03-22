@@ -53,6 +53,7 @@ nnoremap 00 zo
 nnoremap -- zc
 
 "tabs
+set expandtab
 set cindent
 set tabstop=2
 set shiftwidth=2
