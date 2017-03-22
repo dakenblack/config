@@ -57,6 +57,12 @@ set cindent
 set tabstop=2
 set shiftwidth=2
 
+"moving lines around
+nnoremap <Right> :>><CR>
+nnoremap <Left> :<<<CR>
+vnoremap <Right> :>><CR>gv
+vnoremap <Left> :<<<CR>gv
+
 "tags stuff
 set tags=./tags;,tags;
 nnoremap ] <C-]>
