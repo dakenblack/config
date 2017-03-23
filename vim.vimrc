@@ -32,12 +32,12 @@ vnoremap / y/<C-R>"<CR>
 vnoremap ( y:s/<C-R>"/(<C-R>")/<CR>
 
 "moving lines
-nnoremap <Down> :m +1<CR>==
-nnoremap <Up> :m -2<CR>==
+nnoremap <Down> zi:m +1<CR>==zi
+nnoremap <Up> zi:m -2<CR>==zi
 "inoremap <Down> <Esc>:m .+1<CR>==gi
 "inoremap <Up> <Esc>:m .-2<CR>==gi
-vnoremap <Down> :m '>+1<CR>gv=gv
-vnoremap <Up> :m '<-2<CR>gv=gv
+vnoremap <Down> zi:m '>+1<CR>gv=gvzi
+vnoremap <Up> zi:m '<-2<CR>gv=gvzi
 
 "folding 
 nnoremap 00 zo
