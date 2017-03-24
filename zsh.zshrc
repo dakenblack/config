@@ -34,6 +34,10 @@ power() {
   cat /sys/class/power_supply/BAT0/energy_full
 }
 
+p_status() {
+  cat /sys/class/power_supply/BAT0/status
+}
+
 # END MY ADDITIONS ====================
 
 
