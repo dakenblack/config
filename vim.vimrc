@@ -20,6 +20,8 @@ set fdm=indent
 
 nnoremap J }
 nnoremap K {
+nnoremap L w
+nnoremap H b
 
 inoremap jj <Esc>
 inoremap kk <Esc>
