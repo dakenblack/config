@@ -23,6 +23,11 @@ nnoremap K {
 nnoremap L w
 nnoremap H b
 
+vnoremap J }
+vnoremap K {
+vnoremap L w
+vnoremap H b
+
 inoremap jj <Esc>
 inoremap kk <Esc>
 
