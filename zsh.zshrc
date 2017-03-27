@@ -27,6 +27,8 @@ kinetic() {
 
   # If you use Gazebo:
   source /usr/share/gazebo/setup.sh
+  export GAZEBO_MODEL_PATH="/home/jabez/Projects/gazebo-models:$GAZEBO_MODEL_PATH"
+  export ROS_HOSTNAME=localhost
 }
 
 power() {
