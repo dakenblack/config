@@ -14,6 +14,8 @@ myDu() {
 	for i in `ls -a "${1:-.}"` ; do ; du -s "${1:-.}/$i" ; done
 }
 
+alias o='xdg-open'
+
 # ROS
 kinetic() {
   source /opt/ros/kinetic/setup.zsh
@@ -31,7 +33,7 @@ kinetic() {
   export ROS_HOSTNAME=localhost
 }
 
-power() {
+p() {
   cat /sys/class/power_supply/BAT0/energy_now
   cat /sys/class/power_supply/BAT0/energy_full
 }
