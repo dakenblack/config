@@ -86,3 +86,8 @@ set splitright
 "edit .vimrc on the fly
 command! Fly execute "45vsplit $MYVIMRC"
 command! SV execute "so $MYVIMRC"
+
+function! SetTabs(len)
+  let &l:softtabstop=a:len
+  let &l:shiftwidth=a:len
+endfunction
