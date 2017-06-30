@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
+git config --global user.email "jabez.wilson0@gmail.com"
+git config --global user.name "Jabez Wilson"
 git config --global alias.ac '!git add -A && git commit'
 git config --global alias.unstage 'reset HEAD --'
 git config --global alias.last 'log -1 HEAD'

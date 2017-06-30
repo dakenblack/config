@@ -34,12 +34,9 @@ kinetic() {
 }
 
 p() {
-  cat /sys/class/power_supply/BAT0/energy_now
-  cat /sys/class/power_supply/BAT0/energy_full
-}
-
-p_status() {
-  cat /sys/class/power_supply/BAT0/status
+  cap=`cat /sys/class/power_supply/BAT0/capacity`
+  stat=`cat /sys/class/power_supply/BAT0/status`
+  echo "${stat}, at ${cap}%"
 }
 
 # END MY ADDITIONS ====================

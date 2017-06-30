@@ -34,8 +34,11 @@ inoremap kk <Esc>
 nnoremap ; :
 nnoremap '' :echo @%<CR>
 
+nnoremap <Space> :w<CR>
+
 "look for current highlighted word
 vnoremap / y/<C-R>"<CR>
+"put ( around current highlighted word
 vnoremap ( y:s/<C-R>"/(<C-R>")/<CR>
 
 "moving lines
@@ -56,6 +59,13 @@ set cindent
 set tabstop=2
 set shiftwidth=2
 
+"indent levels
+nnoremap tt :call<Space>SetTabs(2)<CR>
+nnoremap tf :call<Space>SetTabs(4)<CR>
+
+"copying stuff
+vnoremap cc :w !xclip<CR><CR>
+
 "moving lines around
 nnoremap <Right> :><CR>
 nnoremap <Left> :<<CR>
@@ -66,7 +76,7 @@ vnoremap <Left> :<<CR>gv
 set tags=./tags;,tags;
 nnoremap ] <C-]>
 nnoremap [ <C-t>
-nnoremap <C-]> <C-]><C-t>:stj<CR>
+nnoremap <C-]> <C-w><C-]>
 
 "pane stuff
 nnoremap <C-J> <C-W><C-J>
@@ -91,3 +101,5 @@ function! SetTabs(len)
   let &l:softtabstop=a:len
   let &l:shiftwidth=a:len
 endfunction
+
+call SetTabs(4)
