@@ -16,7 +16,7 @@ filetype plugin on
 syntax on
 set number
 set hlsearch
-set fdm=indent
+"set fdm=indent
 
 nnoremap J }
 nnoremap K {
