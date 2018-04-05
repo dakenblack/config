@@ -11,3 +11,4 @@ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Crese
 git config --global alias.rst 'reset --hard HEAD'
 git config --global alias.rstf 'checkout --'
 git config --global push.default simple
+git config --global core.editor "vim"
